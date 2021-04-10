@@ -19,39 +19,17 @@ U 1 1 606238BC
 P 1200 1010
 F 0 "U1" H 1010 1434 50  0000 C CNN
 F 1 "ESP32FullConnector" H 1010 1343 50  0000 C CNN
-F 2 "KisonCommon:jtag1.27-12" H 1200 1010 50  0001 C CNN
+F 2 "KisonCommon:jtag1.27-10" H 1200 1010 50  0001 C CNN
 F 3 "" H 1200 1010 50  0001 C CNN
 	1    1200 1010
-	1    0    0    -1  
-$EndComp
-$Comp
-L KisonCommon:ESP32FullConnector U2
-U 1 1 60623F40
-P 1200 1660
-F 0 "U2" H 1010 2084 50  0000 C CNN
-F 1 "ESP32FullConnector" H 1010 1993 50  0000 C CNN
-F 2 "Connector_Molex:Molex_CLIK-Mate_502382-1270_1x12-1MP_P1.25mm_Vertical" H 1200 1660 50  0001 C CNN
-F 3 "" H 1200 1660 50  0001 C CNN
-	1    1200 1660
-	1    0    0    -1  
-$EndComp
-$Comp
-L Interface_USB:FT2232HL U5
-U 1 1 60625869
-P 4900 3980
-F 0 "U5" H 4900 6361 50  0000 C CNN
-F 1 "FT2232HL" H 4900 6270 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4900 3980 50  0001 C CNN
-F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" H 4900 3980 50  0001 C CNN
-	1    4900 3980
 	1    0    0    -1  
 $EndComp
 $Comp
 L Memory_EEPROM:93CxxC U4
 U 1 1 6063278B
 P 4170 7160
-F 0 "U4" H 4000 7580 50  0000 C CNN
-F 1 "93C56-C173182" H 4030 7510 50  0000 C CNN
+F 0 "U4" H 3560 7000 50  0000 C CNN
+F 1 "93C56-C173182" H 3740 6880 50  0000 C CNN
 F 2 "Package_SO:SOP-8_3.76x4.96mm_P1.27mm" H 4170 7160 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 4170 7160 50  0001 C CNN
 	1    4170 7160
@@ -583,31 +561,16 @@ Wire Wire Line
 	5200 6180 5100 6180
 Connection ~ 5200 6180
 Connection ~ 4500 6180
-Wire Wire Line
-	4500 6180 4300 6180
-Connection ~ 4600 6180
-Wire Wire Line
-	4600 6180 4500 6180
 Connection ~ 4700 6180
-Wire Wire Line
-	4700 6180 4600 6180
 Connection ~ 4800 6180
 Wire Wire Line
 	4800 6180 4700 6180
 Connection ~ 4900 6180
 Wire Wire Line
 	4900 6180 4800 6180
-Connection ~ 5000 6180
-Wire Wire Line
-	5000 6180 4900 6180
 Connection ~ 5100 6180
 Wire Wire Line
-	5100 6180 5000 6180
-Wire Wire Line
-	3700 5780 3700 6180
-Wire Wire Line
 	3700 6180 4300 6180
-Connection ~ 4300 6180
 $Comp
 L power:+1V8 #PWR0119
 U 1 1 6067093D
@@ -628,11 +591,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 1780 5200 1780
 Connection ~ 5200 1780
-Wire Wire Line
-	5200 1780 5300 1780
-Connection ~ 5300 1780
-Wire Wire Line
-	5300 1780 5400 1780
 $Comp
 L power:+3V3 #PWR0120
 U 1 1 60673FD2
@@ -644,7 +602,6 @@ F 3 "" H 5400 1780 50  0001 C CNN
 	1    5400 1780
 	1    0    0    -1  
 $EndComp
-Connection ~ 5400 1780
 Text GLabel 6100 2080 2    50   Input ~ 0
 TCK
 Text GLabel 6100 2180 2    50   Input ~ 0
@@ -655,10 +612,6 @@ Text GLabel 6100 2380 2    50   Input ~ 0
 TMS
 Text GLabel 6100 2580 2    50   Input ~ 0
 nTRST
-Text GLabel 6100 3880 2    50   Input ~ 0
-TXD
-Text GLabel 6100 3980 2    50   Input ~ 0
-RXD
 $Comp
 L Transistor_BJT:S8050 Q1
 U 1 1 60683C3F
@@ -725,25 +678,17 @@ Text GLabel 1220 800  2    50   Input ~ 0
 nTRST
 Text GLabel 1220 1450 2    50   Input ~ 0
 nTRST
-Text GLabel 800  1800 0    50   Input ~ 0
+Text GLabel 800  1720 0    50   Input ~ 0
 IO0
-Text GLabel 800  1150 0    50   Input ~ 0
+Text GLabel 800  1070 0    50   Input ~ 0
 IO0
-Text GLabel 1220 1080 2    50   Input ~ 0
-TXD
-Text GLabel 1220 1730 2    50   Input ~ 0
-TXD
-Text GLabel 800  1080 0    50   Input ~ 0
-RXD
-Text GLabel 800  1730 0    50   Input ~ 0
-RXD
-Text GLabel 800  870  0    50   Input ~ 0
+Text GLabel 800  890  0    50   Input ~ 0
 TCK
-Text GLabel 800  1520 0    50   Input ~ 0
+Text GLabel 800  1540 0    50   Input ~ 0
 TCK
-Text GLabel 800  940  0    50   Input ~ 0
+Text GLabel 800  980  0    50   Input ~ 0
 TDO
-Text GLabel 800  1590 0    50   Input ~ 0
+Text GLabel 800  1630 0    50   Input ~ 0
 TDO
 $Comp
 L power:GND #PWR0125
@@ -767,13 +712,13 @@ F 3 "" H 800 800 50  0001 C CNN
 	1    800  800 
 	0    1    1    0   
 $EndComp
-Text GLabel 1220 870  2    50   Input ~ 0
+Text GLabel 1220 890  2    50   Input ~ 0
 TDI
-Text GLabel 1220 1520 2    50   Input ~ 0
+Text GLabel 1220 1540 2    50   Input ~ 0
 TDI
-Text GLabel 1220 940  2    50   Input ~ 0
+Text GLabel 1220 980  2    50   Input ~ 0
 TMS
-Text GLabel 1220 1590 2    50   Input ~ 0
+Text GLabel 1220 1630 2    50   Input ~ 0
 TMS
 Text GLabel 6100 4280 2    50   Input ~ 0
 nDTR
@@ -785,7 +730,7 @@ U 1 1 605C8E21
 P 1420 6840
 F 0 "U6" H 1230 7264 50  0000 C CNN
 F 1 "ESP32FullConnector" H 1230 7173 50  0000 C CNN
-F 2 "KisonCommon:jtag1.27-12" H 1420 6840 50  0001 C CNN
+F 2 "KisonCommon:jtag1.27-10" H 1420 6840 50  0001 C CNN
 F 3 "" H 1420 6840 50  0001 C CNN
 	1    1420 6840
 	1    0    0    -1  
@@ -796,7 +741,7 @@ U 1 1 605CA8D0
 P 1430 7510
 F 0 "U7" H 1240 7934 50  0000 C CNN
 F 1 "ESP32FullConnector" H 1240 7843 50  0000 C CNN
-F 2 "KisonCommon:jtag1.27-12" H 1430 7510 50  0001 C CNN
+F 2 "KisonCommon:jtag1.27-10" H 1430 7510 50  0001 C CNN
 F 3 "" H 1430 7510 50  0001 C CNN
 	1    1430 7510
 	1    0    0    -1  
@@ -1117,7 +1062,7 @@ U 1 1 60622138
 P 2920 5360
 F 0 "X1" H 3364 5406 50  0000 L CNN
 F 1 "ASCO" H 3364 5315 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_Abracon_ASCO-4Pin_1.6x1.2mm" H 3020 5010 50  0001 C CNN
+F 2 "Oscillator:Oscillator_SMD_Fordahl_DFAS15-4Pin_5.0x3.2mm" H 3020 5010 50  0001 C CNN
 F 3 "https://abracon.com/Oscillators/ASCO.pdf" H 2695 5485 50  0001 C CNN
 	1    2920 5360
 	1    0    0    -1  
@@ -1209,7 +1154,7 @@ F 3 "~" H 9570 1360 50  0001 C CNN
 	1    9570 1360
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1220 1010 2    50   Input ~ 0
+Text GLabel 1220 1070 2    50   Input ~ 0
 3v3OUT
 $Comp
 L power:GND #PWR03
@@ -1421,25 +1366,14 @@ Text GLabel 11060 2030 1    50   Input ~ 0
 3v3OUT
 Connection ~ 10470 2030
 $Comp
-L Device:R R20
-U 1 1 60848352
-P 10470 2560
-F 0 "R20" V 10470 2510 50  0000 L CNN
-F 1 "22k" V 10390 2520 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10400 2560 50  0001 C CNN
-F 3 "~" H 10470 2560 50  0001 C CNN
-	1    10470 2560
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR08
 U 1 1 60848F79
-P 10470 2710
-F 0 "#PWR08" H 10470 2460 50  0001 C CNN
-F 1 "GND" H 10475 2537 50  0000 C CNN
-F 2 "" H 10470 2710 50  0001 C CNN
-F 3 "" H 10470 2710 50  0001 C CNN
-	1    10470 2710
+P 10770 2710
+F 0 "#PWR08" H 10770 2460 50  0001 C CNN
+F 1 "GND" H 10775 2537 50  0000 C CNN
+F 2 "" H 10770 2710 50  0001 C CNN
+F 3 "" H 10770 2710 50  0001 C CNN
+	1    10770 2710
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1468,7 +1402,7 @@ L Device:C C18
 U 1 1 60868C5D
 P 10770 1880
 F 0 "C18" H 10600 1960 50  0000 L CNN
-F 1 "22pf" H 10580 1780 50  0000 L CNN
+F 1 "22uf" H 10580 1780 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10808 1730 50  0001 C CNN
 F 3 "~" H 10770 1880 50  0001 C CNN
 	1    10770 1880
@@ -1479,7 +1413,7 @@ L Device:C C20
 U 1 1 608691F6
 P 10470 1880
 F 0 "C20" H 10310 1960 50  0000 L CNN
-F 1 "22pf" H 10280 1780 50  0000 L CNN
+F 1 "22uf" H 10280 1780 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10508 1730 50  0001 C CNN
 F 3 "~" H 10470 1880 50  0001 C CNN
 	1    10470 1880
@@ -1694,7 +1628,7 @@ Wire Wire Line
 	10300 2280 10300 2330
 Wire Wire Line
 	10300 2330 10470 2330
-Text GLabel 1220 1660 2    50   Input ~ 0
+Text GLabel 1220 1720 2    50   Input ~ 0
 3v3OUT
 Text GLabel 8980 3130 1    50   Input ~ 0
 TDI
@@ -1741,12 +1675,8 @@ Text GLabel 10390 3510 1    50   Input ~ 0
 TMS
 Text GLabel 9390 3510 1    50   Input ~ 0
 TCK
-Text GLabel 8950 4570 1    50   Input ~ 0
-RXD
 Text GLabel 9390 4990 1    50   Input ~ 0
 IO0
-Text GLabel 7950 4570 1    50   Input ~ 0
-TXD
 $Comp
 L power:GND #PWR015
 U 1 1 60753364
@@ -1819,10 +1749,6 @@ Text GLabel 9390 3710 3    50   Input ~ 0
 TCK
 Text GLabel 10390 5190 3    50   Input ~ 0
 TDO
-Text GLabel 8950 4770 3    50   Input ~ 0
-RXD
-Text GLabel 7950 4770 3    50   Input ~ 0
-TXD
 Text GLabel 10390 4990 1    50   Input ~ 0
 TDO
 Text GLabel 9390 5190 3    50   Input ~ 0
@@ -1847,6 +1773,132 @@ F 1 "GND" V 1375 4942 50  0000 R CNN
 F 2 "" H 1370 5070 50  0001 C CNN
 F 3 "" H 1370 5070 50  0001 C CNN
 	1    1370 5070
+	1    0    0    -1  
+$EndComp
+Text GLabel 6100 3880 2    50   Input ~ 0
+2232TX
+Text GLabel 6950 3450 0    50   Input ~ 0
+2232TX
+$Comp
+L Device:R R22
+U 1 1 607147ED
+P 7100 3450
+F 0 "R22" V 7100 3450 50  0000 C CNN
+F 1 "0" V 6984 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 3450 50  0001 C CNN
+F 3 "~" H 7100 3450 50  0001 C CNN
+	1    7100 3450
+	0    1    1    0   
+$EndComp
+Text GLabel 7250 3450 2    50   Input ~ 0
+ESPRX
+$Comp
+L Device:R R23
+U 1 1 6071BB77
+P 7100 3570
+F 0 "R23" V 7100 3570 50  0000 C CNN
+F 1 "0" V 6984 3570 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 3570 50  0001 C CNN
+F 3 "~" H 7100 3570 50  0001 C CNN
+	1    7100 3570
+	0    1    -1   0   
+$EndComp
+Text GLabel 6100 3980 2    50   Input ~ 0
+2232RX
+Text GLabel 6950 3570 0    50   Input ~ 0
+2232RX
+Text GLabel 7250 3570 2    50   Input ~ 0
+ESPTX
+Text GLabel 1220 1160 2    50   Input ~ 0
+ESPTX
+Text GLabel 800  1160 0    50   Input ~ 0
+ESPRX
+Text GLabel 800  1810 0    50   Input ~ 0
+ESPRX
+Text GLabel 1220 1810 2    50   Input ~ 0
+ESPTX
+$Comp
+L power:+3V3 #PWR0152
+U 1 1 60732C49
+P 4170 6860
+F 0 "#PWR0152" H 4170 6710 50  0001 C CNN
+F 1 "+3V3" H 4185 7033 50  0000 C CNN
+F 2 "" H 4170 6860 50  0001 C CNN
+F 3 "" H 4170 6860 50  0001 C CNN
+	1    4170 6860
+	1    0    0    -1  
+$EndComp
+Text GLabel 8950 4570 1    50   Input ~ 0
+ESPRX
+Text GLabel 7950 4570 1    50   Input ~ 0
+ESPTX
+Text GLabel 7950 4770 3    50   Input ~ 0
+ESPTX
+Text GLabel 8950 4770 3    50   Input ~ 0
+ESPRX
+Connection ~ 5400 1780
+Connection ~ 5300 1780
+Wire Wire Line
+	5300 1780 5400 1780
+Wire Wire Line
+	5200 1780 5300 1780
+Connection ~ 4300 6180
+Wire Wire Line
+	5100 6180 5000 6180
+Wire Wire Line
+	5000 6180 4900 6180
+Connection ~ 5000 6180
+Wire Wire Line
+	4700 6180 4600 6180
+Wire Wire Line
+	4600 6180 4500 6180
+Connection ~ 4600 6180
+Wire Wire Line
+	3700 5780 3700 6180
+Wire Wire Line
+	4500 6180 4300 6180
+$Comp
+L Interface_USB:FT2232HL U5
+U 1 1 60625869
+P 4900 3980
+F 0 "U5" H 4900 6361 50  0000 C CNN
+F 1 "FT2232HL" H 4900 6270 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4900 3980 50  0001 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" H 4900 3980 50  0001 C CNN
+	1    4900 3980
+	1    0    0    -1  
+$EndComp
+$Comp
+L KisonCommon:ESP32FullConnector U2
+U 1 1 60623F40
+P 1200 1660
+F 0 "U2" H 1010 2084 50  0000 C CNN
+F 1 "ESP32FullConnector" H 1010 1993 50  0000 C CNN
+F 2 "Connector_Molex:Molex_CLIK-Mate_502382-1070_1x10-1MP_P1.25mm_Vertical" H 1200 1660 50  0001 C CNN
+F 3 "" H 1200 1660 50  0001 C CNN
+	1    1200 1660
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 60848352
+P 10620 2410
+F 0 "R20" V 10620 2360 50  0000 L CNN
+F 1 "22k" V 10540 2370 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10550 2410 50  0001 C CNN
+F 3 "~" H 10620 2410 50  0001 C CNN
+	1    10620 2410
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 60722D2E
+P 10770 2560
+F 0 "R24" V 10770 2490 50  0000 L CNN
+F 1 "0" H 10840 2515 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10700 2560 50  0001 C CNN
+F 3 "~" H 10770 2560 50  0001 C CNN
+	1    10770 2560
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
