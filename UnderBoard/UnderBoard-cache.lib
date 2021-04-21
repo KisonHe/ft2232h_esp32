@@ -1,0 +1,41 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# KisonCommon_ESP32FullConnector
+#
+DEF KisonCommon_ESP32FullConnector U 0 40 Y Y 1 F N
+F0 "U" -200 310 50 H V C CNN
+F1 "KisonCommon_ESP32FullConnector" -140 -320 50 H V C CNN
+F2 "KisonCommon:jtag1.27-12" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -300 240 -80 -170 0 1 0 N
+X TRST 1 20 210 100 L 40 20 1 1 B
+X RX 10 -400 -150 100 R 40 20 1 1 B
+X GND 2 -400 210 100 R 40 20 1 1 W
+X TDI 3 20 120 100 L 40 20 1 1 B
+X TCLK 4 -400 120 100 R 40 20 1 1 B
+X TMS 5 20 30 100 L 40 20 1 1 B
+X TDO 6 -400 30 100 R 40 20 1 1 B
+X 3V3 7 20 -60 100 L 40 20 1 1 W
+X IO0 8 -400 -60 100 R 40 20 1 1 B
+X TX 9 20 -150 100 L 40 20 1 1 B
+ENDDRAW
+ENDDEF
+#
+# Mechanical_MountingHole
+#
+DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
+ENDDRAW
+ENDDEF
+#
+#End Library
