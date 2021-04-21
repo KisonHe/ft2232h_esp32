@@ -747,28 +747,6 @@ nDTR
 Text GLabel 6100 4080 2    50   Input ~ 0
 nRTS
 $Comp
-L KisonCommon:ESP32FullConnector U6
-U 1 1 605C8E21
-P 1420 6840
-F 0 "U6" H 1230 7264 50  0000 C CNN
-F 1 "ESP32FullConnector" H 1230 7173 50  0000 C CNN
-F 2 "KisonCommon:jtag1.27-10" H 1420 6840 50  0001 C CNN
-F 3 "" H 1420 6840 50  0001 C CNN
-	1    1420 6840
-	1    0    0    -1  
-$EndComp
-$Comp
-L KisonCommon:ESP32FullConnector U7
-U 1 1 605CA8D0
-P 1430 7510
-F 0 "U7" H 1240 7934 50  0000 C CNN
-F 1 "ESP32FullConnector" H 1240 7843 50  0000 C CNN
-F 2 "KisonCommon:jtag1.27-10" H 1430 7510 50  0001 C CNN
-F 3 "" H 1430 7510 50  0001 C CNN
-	1    1430 7510
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H1
 U 1 1 605CF474
 P 1760 6670
@@ -1584,50 +1562,6 @@ F 3 "" H 3320 5660 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H5
-U 1 1 605C59FE
-P 2500 6590
-F 0 "H5" H 2600 6636 50  0000 L CNN
-F 1 "MountingHole" H 2600 6545 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2500 6590 50  0001 C CNN
-F 3 "~" H 2500 6590 50  0001 C CNN
-	1    2500 6590
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H6
-U 1 1 605C5EED
-P 2520 6800
-F 0 "H6" H 2620 6846 50  0000 L CNN
-F 1 "MountingHole" H 2620 6755 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2520 6800 50  0001 C CNN
-F 3 "~" H 2520 6800 50  0001 C CNN
-	1    2520 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H7
-U 1 1 605C6332
-P 2530 6990
-F 0 "H7" H 2630 7036 50  0000 L CNN
-F 1 "MountingHole" H 2630 6945 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2530 6990 50  0001 C CNN
-F 3 "~" H 2530 6990 50  0001 C CNN
-	1    2530 6990
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H8
-U 1 1 605C6637
-P 2540 7210
-F 0 "H8" H 2640 7256 50  0000 L CNN
-F 1 "MountingHole" H 2640 7165 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2540 7210 50  0001 C CNN
-F 3 "~" H 2540 7210 50  0001 C CNN
-	1    2540 7210
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VBUS #PWR0148
 U 1 1 605CBCB5
 P 1370 4070
@@ -1952,4 +1886,18 @@ F 4 "C21189" H 10770 2560 50  0001 C CNN "LCSC"
 	1    10770 2560
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3V3 #PWR0153
+U 1 1 60865825
+P 3250 2080
+F 0 "#PWR0153" H 3250 1930 50  0001 C CNN
+F 1 "+3V3" V 3265 2208 50  0000 L CNN
+F 2 "" H 3250 2080 50  0001 C CNN
+F 3 "" H 3250 2080 50  0001 C CNN
+	1    3250 2080
+	1    0    0    -1  
+$EndComp
+Connection ~ 3250 2080
+Text Notes 9210 2850 0    50   ~ 0
+R24 to make it easier to modify VOut
 $EndSCHEMATC
