@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L KisonCommon:ESP32FullConnector U1
+L KisonCommon:ESP32FullConnectorTX U1
 U 1 1 606238BC
 P 1200 1010
 F 0 "U1" H 1010 1434 50  0000 C CNN
@@ -696,21 +696,21 @@ Text GLabel 6020 1540 2    50   Input ~ 0
 IO0
 Text GLabel 6020 620  2    50   Input ~ 0
 nTRST
-Text GLabel 1220 800  2    50   Input ~ 0
+Text GLabel 1220 1070 2    50   Input ~ 0
 nTRST
-Text GLabel 1220 1450 2    50   Input ~ 0
+Text GLabel 1220 1720 2    50   Input ~ 0
 nTRST
 Text GLabel 800  1720 0    50   Input ~ 0
 IO0
 Text GLabel 800  1070 0    50   Input ~ 0
 IO0
+Text GLabel 1220 890  2    50   Input ~ 0
+TCK
+Text GLabel 1220 1540 2    50   Input ~ 0
+TCK
 Text GLabel 800  890  0    50   Input ~ 0
-TCK
-Text GLabel 800  1540 0    50   Input ~ 0
-TCK
-Text GLabel 800  980  0    50   Input ~ 0
 TDO
-Text GLabel 800  1630 0    50   Input ~ 0
+Text GLabel 800  1540 0    50   Input ~ 0
 TDO
 $Comp
 L power:GND #PWR0125
@@ -734,13 +734,13 @@ F 3 "" H 800 800 50  0001 C CNN
 	1    800  800 
 	0    1    1    0   
 $EndComp
-Text GLabel 1220 890  2    50   Input ~ 0
-TDI
-Text GLabel 1220 1540 2    50   Input ~ 0
-TDI
 Text GLabel 1220 980  2    50   Input ~ 0
-TMS
+TDI
 Text GLabel 1220 1630 2    50   Input ~ 0
+TDI
+Text GLabel 800  980  0    50   Input ~ 0
+TMS
+Text GLabel 800  1630 0    50   Input ~ 0
 TMS
 Text GLabel 6100 4280 2    50   Input ~ 0
 nDTR
@@ -1167,7 +1167,7 @@ F 3 "~" H 9570 1360 50  0001 C CNN
 	1    9570 1360
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1220 1070 2    50   Input ~ 0
+Text GLabel 1220 800  2    50   Input ~ 0
 3v3OUT
 $Comp
 L power:GND #PWR03
@@ -1609,7 +1609,7 @@ Wire Wire Line
 	10300 2280 10300 2330
 Wire Wire Line
 	10300 2330 10470 2330
-Text GLabel 1220 1720 2    50   Input ~ 0
+Text GLabel 1220 1450 2    50   Input ~ 0
 3v3OUT
 Text GLabel 8980 3130 1    50   Input ~ 0
 TDI
@@ -1624,7 +1624,7 @@ F 3 "" H 8480 3730 50  0001 C CNN
 	1    8480 3730
 	1    0    0    -1  
 $EndComp
-Text GLabel 7980 3130 1    50   Input ~ 0
+Text GLabel 9390 4990 1    50   Input ~ 0
 nTRST
 $Comp
 L KisonCommon:USBLC6-2SC6-Power_Protection U3
@@ -1637,7 +1637,7 @@ F 3 "" H 1570 4920 50  0001 C CNN
 	1    1370 4570
 	1    0    0    -1  
 $EndComp
-Text GLabel 7980 3330 3    50   Input ~ 0
+Text GLabel 9390 5190 3    50   Input ~ 0
 nTRST
 Text GLabel 8980 3330 3    50   Input ~ 0
 TDI
@@ -1652,11 +1652,11 @@ F 3 "" H 8680 3580 50  0001 C CNN
 	1    8480 3230
 	1    0    0    -1  
 $EndComp
-Text GLabel 10390 3510 1    50   Input ~ 0
-TMS
 Text GLabel 9390 3510 1    50   Input ~ 0
+TMS
+Text GLabel 10390 3510 1    50   Input ~ 0
 TCK
-Text GLabel 9390 4990 1    50   Input ~ 0
+Text GLabel 10390 4990 1    50   Input ~ 0
 IO0
 $Comp
 L power:GND #PWR015
@@ -1692,17 +1692,6 @@ F 3 "" H 8450 5170 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L KisonCommon:USBLC6-2SC6-Power_Protection U10
-U 1 1 607A2348
-P 8450 4670
-F 0 "U10" H 8450 5351 50  0000 C CNN
-F 1 "USBLC6-2SC6-Power_Protection" H 8450 5280 50  0000 C CNN
-F 2 "KisonCommon:USBLC6-2P6-SOT666" H 7700 5070 50  0001 C CNN
-F 3 "" H 8650 5020 50  0001 C CNN
-	1    8450 4670
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR017
 U 1 1 607A4C4F
 P 9890 5590
@@ -1724,15 +1713,15 @@ F 3 "" H 10090 5440 50  0001 C CNN
 	1    9890 5090
 	1    0    0    -1  
 $EndComp
-Text GLabel 10390 3710 3    50   Input ~ 0
-TMS
 Text GLabel 9390 3710 3    50   Input ~ 0
+TMS
+Text GLabel 10390 3710 3    50   Input ~ 0
 TCK
+Text GLabel 7980 3330 3    50   Input ~ 0
+TDO
+Text GLabel 7980 3130 1    50   Input ~ 0
+TDO
 Text GLabel 10390 5190 3    50   Input ~ 0
-TDO
-Text GLabel 10390 4990 1    50   Input ~ 0
-TDO
-Text GLabel 9390 5190 3    50   Input ~ 0
 IO0
 $Comp
 L power:GND #PWR0150
@@ -1758,48 +1747,12 @@ F 3 "" H 1370 5070 50  0001 C CNN
 $EndComp
 Text GLabel 6100 3880 2    50   Input ~ 0
 2232TX
-Text GLabel 6950 3450 0    50   Input ~ 0
+Text GLabel 800  1810 0    50   Input ~ 0
 2232TX
-$Comp
-L Device:R R22
-U 1 1 607147ED
-P 7100 3450
-F 0 "R22" V 7100 3450 50  0000 C CNN
-F 1 "0" V 6984 3450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 3450 50  0001 C CNN
-F 3 "~" H 7100 3450 50  0001 C CNN
-F 4 "C21189" H 7100 3450 50  0001 C CNN "LCSC"
-	1    7100 3450
-	0    1    1    0   
-$EndComp
-Text GLabel 7250 3450 2    50   Input ~ 0
-ESPRX
-$Comp
-L Device:R R23
-U 1 1 6071BB77
-P 7100 3570
-F 0 "R23" V 7100 3570 50  0000 C CNN
-F 1 "0" V 6984 3570 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 3570 50  0001 C CNN
-F 3 "~" H 7100 3570 50  0001 C CNN
-F 4 "C21189" H 7100 3570 50  0001 C CNN "LCSC"
-	1    7100 3570
-	0    1    -1   0   
-$EndComp
 Text GLabel 6100 3980 2    50   Input ~ 0
 2232RX
-Text GLabel 6950 3570 0    50   Input ~ 0
-2232RX
-Text GLabel 7250 3570 2    50   Input ~ 0
-ESPTX
-Text GLabel 1220 1160 2    50   Input ~ 0
-ESPTX
-Text GLabel 800  1160 0    50   Input ~ 0
-ESPRX
-Text GLabel 800  1810 0    50   Input ~ 0
-ESPRX
 Text GLabel 1220 1810 2    50   Input ~ 0
-ESPTX
+2232RX
 $Comp
 L power:+3V3 #PWR0152
 U 1 1 60732C49
@@ -1811,14 +1764,6 @@ F 3 "" H 4170 6860 50  0001 C CNN
 	1    4170 6860
 	1    0    0    -1  
 $EndComp
-Text GLabel 8950 4570 1    50   Input ~ 0
-ESPRX
-Text GLabel 7950 4570 1    50   Input ~ 0
-ESPTX
-Text GLabel 7950 4770 3    50   Input ~ 0
-ESPTX
-Text GLabel 8950 4770 3    50   Input ~ 0
-ESPRX
 Connection ~ 5400 1780
 Connection ~ 5300 1780
 Wire Wire Line
@@ -1852,7 +1797,7 @@ F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf" H
 	1    0    0    -1  
 $EndComp
 $Comp
-L KisonCommon:ESP32FullConnector U2
+L KisonCommon:ESP32FullConnectorTX U2
 U 1 1 60623F40
 P 1200 1660
 F 0 "U2" H 1010 2084 50  0000 C CNN
@@ -1900,4 +1845,27 @@ $EndComp
 Connection ~ 3250 2080
 Text Notes 9210 2850 0    50   ~ 0
 R24 to make it easier to modify VOut
+Text GLabel 800  1160 0    50   Input ~ 0
+2232TX
+Text GLabel 1220 1160 2    50   Input ~ 0
+2232RX
+$Comp
+L KisonCommon:USBLC6-2SC6-Power_Protection U10
+U 1 1 607A2348
+P 8450 4670
+F 0 "U10" H 8450 5351 50  0000 C CNN
+F 1 "USBLC6-2SC6-Power_Protection" H 8450 5280 50  0000 C CNN
+F 2 "KisonCommon:USBLC6-2P6-SOT666" H 7700 5070 50  0001 C CNN
+F 3 "" H 8650 5020 50  0001 C CNN
+	1    8450 4670
+	1    0    0    -1  
+$EndComp
+Text GLabel 7950 4770 3    50   Input ~ 0
+2232RX
+Text GLabel 8950 4770 3    50   Input ~ 0
+2232TX
+Text GLabel 8950 4570 1    50   Input ~ 0
+2232TX
+Text GLabel 7950 4570 1    50   Input ~ 0
+2232RX
 $EndSCHEMATC
